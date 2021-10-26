@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Satisfactory</Name>
+  <Repository>ich777/steamcmd:latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1635271107</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>15777</HostPort>
+        <ContainerPort>15777</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>15777</HostPort>
+        <ContainerPort>15777</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>15000</HostPort>
+        <ContainerPort>15000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>15000</HostPort>
+        <ContainerPort>15000</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7777</HostPort>
+        <ContainerPort>7777</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7777</HostPort>
+        <ContainerPort>7777</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appcache/satisfactory/steamcmd</HostDir>
+      <ContainerDir>/serverdata/steamcmd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appcache/satisfactory/saves</HostDir>
+      <ContainerDir>/serverdata/serverfiles</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>satisfactory</HostDir>
+      <ContainerDir>GAME_NAME</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1690800</Value>
+      <Name>GAME_ID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>-unattended -log</Value>
+      <Name>GAME_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>7777</Value>
+      <Name>GAME_PORT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Game Files" Target="/serverdata/steamcmd" Default="/mnt/user/appcache/satisfactory/steamcmd" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appcache/satisfactory/steamcmd</Config>
+  <Config Name="Host Path 2" Target="/serverdata/serverfiles" Default="/mnt/user/appcache/satisfactory/saves" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appcache/satisfactory/saves</Config>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="1690800" Mode="" Description="Container Variable: GAME_ID" Type="Variable" Display="always" Required="false" Mask="false">1690800</Config>
+  <Config Name="GAME_NAME" Target="GAME_NAME" Default="satisfactory" Mode="rw" Description="Container Path: GAME_NAME" Type="Path" Display="always" Required="false" Mask="false">satisfactory</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="-unattended -log" Mode="" Description="Container Variable: GAME_PARAMS" Type="Variable" Display="always" Required="false" Mask="false">-unattended -log</Config>
+  <Config Name="UID" Target="UID" Default="99" Mode="" Description="Container Variable: UID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="100" Mode="" Description="Container Variable: GID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="GAME_PORT" Target="GAME_PORT" Default="7777" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="always" Required="false" Mask="false">7777</Config>
+  <Config Name="ServerQueryPort" Target="15777" Default="15777" Mode="tcp" Description="Container Port: 15777" Type="Port" Display="always" Required="false" Mask="false">15777</Config>
+  <Config Name="ServerQueryPortUDP" Target="15777" Default="15777" Mode="udp" Description="Container Port: 15777" Type="Port" Display="always" Required="false" Mask="false">15777</Config>
+  <Config Name="BeaconPort" Target="15000" Default="15000" Mode="tcp" Description="Container Port: 15000" Type="Port" Display="always" Required="false" Mask="false">15000</Config>
+  <Config Name="BeaconPortUDP" Target="15000" Default="15000" Mode="udp" Description="Container Port: 15000" Type="Port" Display="always" Required="false" Mask="false">15000</Config>
+  <Config Name="GamePort" Target="7777" Default="7777" Mode="tcp" Description="Container Port: 7777" Type="Port" Display="always" Required="false" Mask="false">7777</Config>
+  <Config Name="GamePortUDP" Target="7777" Default="7777" Mode="udp" Description="Container Port: 7777" Type="Port" Display="always" Required="false" Mask="false">7777</Config>
+</Container>
